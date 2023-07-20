@@ -39,5 +39,5 @@ dependencies {
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation project(':okDownloader')
-    implementation 'com.github.jiangyingjun:OkDownloader:Tag'
+//    implementation 'com.github.jiangyingjun:OkDownloader:Tag'
 }
