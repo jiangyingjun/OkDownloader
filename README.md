@@ -12,18 +12,18 @@ This is a very simple multi-task file downloader for android。
 
 ### Step 1. Add the JitPack repository to your build file
 
-allprojects {
+`allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
-	}
+	}`
 
  ### Step 2. Add the dependency
 
- dependencies {
+ `dependencies {
 	        implementation 'com.github.jiangyingjun:OkDownloader:1.0.1'
-	}
+	}`
 
 ## User Manual
 
@@ -59,15 +59,15 @@ allprojects {
  ### 2.Start downloading 
    //param isSerial #Is the download task serial。default ：false（parallel downloading） #
    
-   OkDownloader.instance.start(true)
+   `OkDownloader.instance.start(true)`
 
  ### 3.pause downloading 
-   OkDownloader.instance.pause()
+   `OkDownloader.instance.pause()`
 
 ## 4.Queue for all tasks
    //In this queue. You can operate a specific task to start or pause
    
-   OkDownloader.instance.getRunnableList()
+   `OkDownloader.instance.getRunnableList()`
 
    ### for example
      OkDownloader.instance.getRunnableList().forEach { innerRunnable ->
@@ -87,9 +87,11 @@ allprojects {
  ## 5.Other configurations
 
       //Callback message interval (in milliseconds). Default: 50
+      
       OkDownloader.instance.setGlobalInterval(50)
 
       //Number of task error retries. Default 3 times
+      
       OkDownloader.instance.setRetryTimes(3)
       
 
