@@ -53,7 +53,7 @@ allprojects {
                 }
 
                 override fun onComplete(task: DownloadTask?) {
-       		         //完成下载任务的下载文件
+                    //完成下载任务的下载文件
                     task?.downloadFile()
                 }
 
