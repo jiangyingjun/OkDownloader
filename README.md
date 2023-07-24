@@ -84,7 +84,14 @@ allprojects {
                                 return@forEach
                             }
                         }
- 
+ ## 5.Other configurations
+
+      //Callback message interval (in milliseconds). Default: 50
+      OkDownloader.instance.setGlobalInterval(50)
+
+      //Number of task error retries. Default 3 times
+      OkDownloader.instance.setRetryTimes(3)
+      
 
 ## Specific usage examples
   For more complete usage examples, please read
