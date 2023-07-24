@@ -6,7 +6,7 @@ This is a very simple multi-task file downloader for android。
 #### 2 Files can be downloaded at breakpoints.（No additional use of sqlite to record download information）
 #### 3 Incomplete download files may exist with the downloading extension 
 
-
+[中文文档](README-zh.md)
 
 ## Getting Started
 
