@@ -1,6 +1,12 @@
 # OkDownloader
 This is a very simple multi-task file downloader for android。
-#### You can start or pause any task at will. (Whether it is a serial or parallel download)
+### feature：
+
+#### 1 You can start or pause any task at will. (Whether it is a serial or parallel download)
+#### 2 Files can be downloaded at breakpoints.（No additional use of sqlite to record download information）
+#### 3 Incomplete download files may exist with the downloading extension 
+
+
 
 ## Getting Started
 
@@ -41,6 +47,8 @@ allprojects {
                 }
 
                 override fun onComplete(task: DownloadTask?) {
+		    //Completed downloading files
+                    task?.downloadFile()
                 }
 
                 override fun onError(task: DownloadTask?, error: Exception) {
@@ -79,7 +87,7 @@ allprojects {
  
 
 ## Specific usage examples
-
+  For more complete usage examples, please read
   [demo](app/src/main/java/com/example/application/MainActivity.kt)
 
  
