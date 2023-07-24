@@ -24,9 +24,9 @@ allprojects {
 
 ### Step 2. 添加依赖
 
-dependencies {
- implementation 'com.github.jiangyingjun:OkDownloader:1.0.1'
-}
+`dependencies {  
+ implementation 'com.github.jiangyingjun:OkDownloader:1.0.1'   
+}`
 
 
 ##用户手册
@@ -65,10 +65,10 @@ dependencies {
 ### 2.开始下载
 //参数 isSerial#是下载任务的序列号默认值：false（并行下载）#
 
-OkDownloader.instance.start(true)
+`OkDownloader.instance.start(true)`
 
 ### 3.暂停下载
- OkDownloader.instance.pause()
+ `OkDownloader.instance.pause()`
 
 ### 4.所有任务的队列
 //在这个队列中。您可以操作特定任务 启动或暂停
@@ -93,11 +93,11 @@ OkDownloader.instance.getRunnableList()
 ### 5.其他配置
   //任务回调间隔 (in milliseconds). 默认: 50毫秒
   
-  OkDownloader.instance.setGlobalInterval(50)
+  `OkDownloader.instance.setGlobalInterval(50)`
 
   //任务错误重试次数. 默认 3次
   
-  OkDownloader.instance.setRetryTimes(3)
+  `OkDownloader.instance.setRetryTimes(3)`
 
 ### 具体使用示例
 更多使用示例，请阅读 [demo](app/src/main/java/com/example/application/MainActivity.kt)
