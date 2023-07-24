@@ -30,27 +30,9 @@ android {
         jvmTarget = '1.8'
     }
 
-    // Because the components are created only during the afterEvaluate phase, you must
-// configure your publications using the afterEvaluate() lifecycle method.
-//    afterEvaluate {
-//        publishing {
-//            publications {
-//                // Creates a Maven publication called "release".
-//                release(MavenPublication) {
-//                    // Applies the component for the release build variant.
-//                    from components.release
-//
-//                    // You can then customize attributes of the publication as shown below.
-//                    groupId = 'com.github.jiangyingjun'
-//                    artifactId = 'OkDownloader'
-//                    version = '1.0.0'
-//                }
-//                // Creates a Maven publication called “debug”.
-//
-//            }
-//        }
-//    }
-
+    publishing {
+        singleVariant("release")
+    }
 
 }
 
@@ -61,6 +43,24 @@ dependencies {
 //    implementation 'com.google.android.material:material:1.5.0'
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.github.jiangyingjun'
+                artifactId = 'OkDownloader'
+                version = '1.0.0'
+            }
+            // Creates a Maven publication called “debug”.
+
+        }
+    }
+}
 
 task generateSourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
